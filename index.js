@@ -1,7 +1,6 @@
 import express from 'express';
 import sequelize from './database.js';
 import Pelicula from './models/Pelicula.js';
-
 const app = express();
 
 app.use(express.json());
