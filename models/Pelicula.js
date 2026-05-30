@@ -2,6 +2,7 @@ import { DataTypes } from 'sequelize';
 import sequelize from '../database.js';
 
 const Pelicula = sequelize.define('Pelicula', {
+
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -9,17 +10,17 @@ const Pelicula = sequelize.define('Pelicula', {
   },
 
   titulo: {
-    type: DataTypes.STRING(150),
+    type: DataTypes.STRING,
     allowNull: false
   },
 
   director: {
-    type: DataTypes.STRING(100),
+    type: DataTypes.STRING,
     allowNull: false
   },
 
   genero: {
-    type: DataTypes.STRING(50),
+    type: DataTypes.STRING,
     allowNull: false
   },
 
@@ -27,9 +28,7 @@ const Pelicula = sequelize.define('Pelicula', {
     type: DataTypes.INTEGER,
     allowNull: false
   }
-}, {
-  tableName: 'peliculas',
-  timestamps: false
+
 });
 
 export default Pelicula;
